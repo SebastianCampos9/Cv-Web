@@ -20,6 +20,6 @@ documentos/          CV en PDF descargable
 
 ## Contenido
 
-Presenta el perfil de Sebastián Campos: formación (Tecnicatura Universitaria en Programación —
+Presenta mi perfil: formación (Tecnicatura Universitaria en Programación —
 UTN Haedo — y cursos de Coderhouse), experiencia laboral, habilidades técnicas, certificados
 obtenidos y proyectos personales.
