@@ -20,6 +20,5 @@ documentos/          CV en PDF descargable
 
 ## Contenido
 
-Presenta mi perfil: formación (Tecnicatura Universitaria en Programación —
-UTN Haedo — y cursos de Coderhouse), experiencia laboral, habilidades técnicas, certificados
+Presenta mi perfil: formación (Tecnicatura Universitaria en Programación — UTN Haedo y cursos de Coderhouse), experiencia laboral, habilidades técnicas, certificados
 obtenidos y proyectos personales.
