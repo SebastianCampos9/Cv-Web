@@ -1,10 +1,4 @@
 /* ==================================================
-   TIPOGRAFÍA
-================================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
-/* ==================================================
    VARIABLES
 ================================================== */
 
@@ -244,23 +238,6 @@ body {
 
 .boton-secundario:hover {
   border-color: var(--texto-principal);
-}
-
-/* ==================================================
-   FOTO PROVISORIA
-================================================== */
-
-.foto-provisoria {
-  width: 280px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--texto-secundario);
-  background-color: var(--fondo-secundario);
-  border: 1px solid var(--borde);
-  border-radius: 2px;
-  text-align: center;
 }
 
 /* ==================================================
@@ -1068,11 +1045,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  .foto-provisoria {
-    width: 240px;
-    height: 300px;
   }
 
   .seccion {
