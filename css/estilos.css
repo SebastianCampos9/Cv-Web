@@ -194,15 +194,23 @@ body {
 }
 
 /* Fotografía de presentación */
+.foto-perfil-marco {
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .foto-perfil {
-    width: 280px;
-    height: 350px;
     display: block;
+    width: 116%;
+    height: 116%;
+    margin: -8%;
     object-fit: cover;
-    object-position: center 42%;
-    border: 1px solid var(--borde);
-    border-radius: 6px;
-    filter: grayscale(100%);
+    object-position: center;
+    filter: brightness(0.9);
 }
 
 /* ==================================================
@@ -1191,9 +1199,9 @@ body {
     bottom: 18px;
   }
 
-  .foto-perfil {
+  .foto-perfil-marco {
     width: 240px;
-    height: 300px;
+    height: 240px;
   }
 
   .sobre-mi-fondo {
