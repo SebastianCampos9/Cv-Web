@@ -1,0 +1,1245 @@
+/* ==================================================
+   TIPOGRAFÍA
+================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+  --fondo-principal: #111214;
+  --fondo-secundario: #191a1d;
+  --texto-principal: #f2f0eb;
+  --texto-secundario: #a7a7aa;
+  --color-acento: #d6d6d6;
+  --borde: #2c2d31;
+}
+
+/* ==================================================
+   ESTILOS GENERALES
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   NAVEGACIÓN
+================================================== */
+
+.encabezado {
+  width: 100%;
+  padding: 6px 8%;
+  background-color: rgba(17, 18, 20, 0.95);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navegacion {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: auto;
+  height: 55px;
+  display: block;
+  object-fit: contain;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.logo:hover img {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu a {
+  color: var(--texto-principal);
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background-color: var(--texto-principal);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--texto-secundario);
+}
+
+.menu a.enlace-activo::after {
+  width: 100%;
+}
+
+.menu a.enlace-activo {
+  color: var(--texto-principal);
+}
+
+/* Botón del menú móvil */
+.boton-menu {
+  width: 42px;
+  height: 42px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.boton-menu span {
+  width: 25px;
+  height: 2px;
+  display: block;
+  background-color: var(--texto-principal);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* ==================================================
+   INICIO
+================================================== */
+
+.inicio {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.inicio-contenido {
+  max-width: 700px;
+}
+
+.presentacion {
+  margin-bottom: 16px;
+  color: var(--texto-secundario);
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.inicio h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.inicio h2 {
+  margin: 14px 0 24px;
+  color: var(--texto-secundario);
+  font-size: clamp(21px, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.inicio-contenido > p:not(.presentacion) {
+  max-width: 620px;
+  color: var(--texto-secundario);
+}
+
+.inicio-botones {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Fotografía de presentación */
+.foto-perfil {
+    width: 280px;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    object-position: center 42%;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    filter: grayscale(100%);
+}
+
+/* ==================================================
+   BOTONES
+================================================== */
+
+.boton {
+  display: inline-block;
+  padding: 12px 20px;
+  color: var(--fondo-principal);
+  background-color: var(--texto-principal);
+  border: 1px solid var(--texto-principal);
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.boton:hover {
+  color: var(--texto-principal);
+  background-color: transparent;
+}
+
+.boton-secundario {
+  color: var(--texto-principal);
+  background-color: transparent;
+  border-color: var(--borde);
+}
+
+.boton-secundario:hover {
+  border-color: var(--texto-principal);
+}
+
+/* ==================================================
+   FOTO PROVISORIA
+================================================== */
+
+.foto-provisoria {
+  width: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* ==================================================
+   SECCIONES GENERALES
+================================================== */
+
+.seccion {
+  width: 84%;
+  max-width: 1000px;
+  min-height: 60vh;
+  margin: 0 auto;
+  padding: 100px 0;
+  border-top: 1px solid var(--borde);
+}
+
+.seccion h2 {
+  margin-bottom: 30px;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.seccion p {
+  max-width: 750px;
+  color: var(--texto-secundario);
+}
+
+.encabezado-seccion {
+  margin-bottom: 40px;
+}
+
+.encabezado-seccion h2 {
+  margin-bottom: 0;
+}
+
+.categoria-seccion {
+  margin-bottom: 8px;
+  color: var(--texto-secundario);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   SOBRE MÍ
+================================================== */
+
+.sobre-mi-contenido {
+  max-width: 750px;
+}
+
+.sobre-mi-contenido p {
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* Fotografía de fondo — Sobre mí */
+.sobre-mi-fondo {
+    min-height: 380px;
+    max-width: 100%;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(17, 18, 20, 0.98) 0%,
+            rgba(17, 18, 20, 0.92) 45%,
+            rgba(17, 18, 20, 0.42) 100%
+        ),
+        url("../img/sobre-mi/sobre-mi-fondo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+.sobre-mi-fondo p {
+    max-width: 56%;
+}
+
+/* ==================================================
+   EXPERIENCIA LABORAL
+================================================== */
+
+.lista-experiencias {
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencia {
+  padding: 38px 0;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 35px;
+  border-bottom: 1px solid var(--borde);
+}
+
+/* Fondos de las experiencias */
+.experiencia-ixnova,
+.experiencia-fatties,
+.experiencia-gold-clean,
+.experiencia-interplan,
+.experiencia-burger-king {
+    padding: 35px 25px;
+    overflow: hidden;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(17, 18, 20, 0.98) 0%,
+            rgba(17, 18, 20, 0.92) 55%,
+            rgba(17, 18, 20, 0.68) 100%
+        ),
+        var(--imagen-experiencia);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+
+/* Imagen correspondiente a cada trabajo */
+.experiencia-ixnova {
+    --imagen-experiencia:
+        url("../img/experiencias/ixnova-deposito.png");
+}
+
+.experiencia-fatties {
+    --imagen-experiencia:
+        url("../img/experiencias/fatties-administracion.png");
+}
+
+.experiencia-gold-clean {
+    --imagen-experiencia:
+        url("../img/experiencias/gold-clean-higiene.png");
+}
+
+.experiencia-interplan {
+    --imagen-experiencia:
+        url("../img/experiencias/interplan-mensajeria.png");
+}
+
+.experiencia-burger-king {
+    --imagen-experiencia:
+        url("../img/experiencias/burger-king-cocina.png");
+}
+
+.experiencia:first-child {
+  border-top: 1px solid var(--borde);
+}
+
+.experiencia-fecha p {
+  color: var(--texto-secundario);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.experiencia-informacion h3 {
+  margin-bottom: 7px;
+  color: var(--texto-principal);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.experiencia-informacion h4 {
+  margin-bottom: 20px;
+  color: var(--texto-secundario);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.experiencia-informacion > p {
+  max-width: 650px;
+  font-size: 15px;
+}
+
+.etiquetas {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.etiquetas span {
+  padding: 6px 10px;
+  color: var(--texto-secundario);
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.referencias {
+  margin-top: 25px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ==================================================
+   ESTUDIOS Y CURSOS
+================================================== */
+
+.lista-estudios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.tarjeta-estudio {
+  min-height: 320px;
+  padding: 32px;
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tarjeta-estudio:hover {
+  transform: translateY(-5px);
+  border-color: var(--texto-secundario);
+}
+
+.fecha-estudio {
+  margin-bottom: 22px;
+  color: var(--texto-secundario);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tarjeta-estudio h3 {
+  margin-bottom: 14px;
+  color: var(--texto-principal);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.tarjeta-estudio .institucion {
+  margin-bottom: 24px;
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+.descripcion-estudio {
+  margin-bottom: 25px;
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+.lista-cursos {
+  margin: 0 0 25px 20px;
+  color: var(--texto-secundario);
+}
+
+.lista-cursos li {
+  margin-bottom: 9px;
+  padding-left: 5px;
+}
+
+.estado-estudio {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 11px;
+  color: var(--texto-principal);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   HABILIDADES
+================================================== */
+
+.descripcion-habilidades {
+  margin-bottom: 40px;
+}
+
+.grilla-habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.grupo-habilidades {
+  min-height: 240px;
+  padding: 28px;
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.grupo-habilidades:hover {
+  transform: translateY(-4px);
+  border-color: var(--texto-secundario);
+}
+
+.grupo-habilidades .numero-grupo {
+  margin-bottom: 25px;
+  color: var(--texto-secundario);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.grupo-habilidades h3 {
+  margin-bottom: 20px;
+  color: var(--texto-principal);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.lista-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.lista-habilidades span {
+  padding: 7px 11px;
+  color: var(--texto-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.aclaracion-habilidad {
+  margin-top: 20px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ==================================================
+   CERTIFICADOS
+================================================== */
+
+.seccion-certificados {
+  overflow: hidden;
+}
+
+.descripcion-certificados {
+  margin-bottom: 40px;
+}
+
+.carrusel-certificados {
+  width: 100%;
+  position: relative;
+}
+
+.escenario-carrusel {
+  width: 100%;
+  height: 540px;
+  position: relative;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.escenario-carrusel.arrastrando {
+  cursor: grabbing;
+}
+
+/* Todos los certificados */
+.certificado {
+  width: 68%;
+  max-width: 650px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) scale(0.8);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* Certificado principal */
+.certificado.activo {
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(calc(-50% + var(--arrastre, 0px))) scale(1);
+}
+
+/* Certificado del lado izquierdo */
+.certificado.anterior {
+  z-index: 2;
+  opacity: 0.1;
+  transform: translateX(calc(-122% + var(--arrastre, 0px))) scale(0.82);
+}
+
+/* Certificado del lado derecho */
+.certificado.siguiente {
+  z-index: 2;
+  opacity: 0.1;
+  transform: translateX(calc(22% + var(--arrastre, 0px))) scale(0.82);
+}
+
+/* Certificados que no deben verse */
+.certificado.oculto {
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.7);
+}
+
+/* Quitamos la animación mientras arrastramos */
+.escenario-carrusel.arrastrando .certificado {
+  transition: none;
+}
+
+/* Imagen sin marco ni fondo agregado */
+.certificado img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border: none;
+  border-radius: 2px;
+  background-color: transparent;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Información del certificado */
+.certificado-informacion {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.certificado-informacion p {
+  margin: 0 auto 5px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.certificado-informacion h3 {
+  color: var(--texto-principal);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Indicadores */
+.indicadores-carrusel {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.indicador {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background-color: var(--borde);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.indicador.activo {
+  width: 24px;
+  background-color: var(--texto-principal);
+  border-radius: 8px;
+}
+
+/* ==================================================
+   PROYECTOS
+================================================== */
+
+.descripcion-proyectos {
+  margin-bottom: 50px;
+}
+
+.lista-proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.proyecto {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.proyecto-invertido .proyecto-imagen {
+  order: 2;
+}
+
+.proyecto-invertido .proyecto-informacion {
+  order: 1;
+}
+
+.proyecto-imagen {
+  width: 100%;
+}
+
+.proyecto-captura {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.proyecto-captura:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+}
+
+.imagen-provisoria {
+  width: 100%;
+  min-height: 280px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  text-align: center;
+}
+
+.proyecto-encabezado {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.proyecto-encabezado .proyecto-numero {
+  color: var(--texto-secundario);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.estado-proyecto {
+  padding: 5px 9px;
+  color: var(--texto-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.proyecto-informacion h3 {
+  margin-bottom: 18px;
+  color: var(--texto-principal);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.proyecto-informacion > p {
+  font-size: 14px;
+}
+
+.tecnologias-proyecto {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tecnologias-proyecto span {
+  color: var(--texto-secundario);
+  font-size: 12px;
+}
+
+.tecnologias-proyecto span:not(:last-child)::after {
+  content: "·";
+  margin-left: 8px;
+  color: var(--borde);
+}
+
+/* ==================================================
+   CONTACTO
+================================================== */
+
+.contacto {
+  min-height: auto;
+}
+
+.contacto-contenido {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+}
+
+.contacto-presentacion > p {
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.contacto-datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.dato-contacto {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.dato-contacto:first-child {
+  border-top: 1px solid var(--borde);
+}
+
+.dato-contacto .dato-titulo {
+  margin-bottom: 6px;
+  color: var(--texto-secundario);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dato-contacto > p:last-child {
+  color: var(--texto-principal);
+  font-size: 14px;
+}
+
+.dato-contacto a {
+  color: var(--texto-principal);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dato-contacto a:hover {
+  color: var(--texto-secundario);
+}
+
+/* ==================================================
+   BOTÓN VOLVER ARRIBA
+================================================== */
+
+.volver-arriba {
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 900;
+  color: var(--texto-principal);
+  background-color: var(--fondo-secundario);
+  border: 1px solid var(--borde);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.volver-arriba.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.volver-arriba:hover {
+  border-color: var(--texto-principal);
+  transform: translateY(-3px);
+}
+
+/* ==================================================
+   PIE DE PÁGINA
+================================================== */
+
+.pie {
+  padding: 35px 20px;
+  color: var(--texto-secundario);
+  border-top: 1px solid var(--borde);
+  font-size: 14px;
+  text-align: center;
+}
+
+.pie p {
+  margin-bottom: 5px;
+}
+
+.pie p:last-child {
+  margin-bottom: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   ANIMACIONES AL HACER SCROLL
+================================================== */
+
+.elemento-animado {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.elemento-animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desactiva las animaciones si el usuario así lo configuró */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .elemento-animado {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ==================================================
+   TABLETS Y CELULARES
+================================================== */
+
+@media (max-width: 850px) {
+  .boton-menu {
+    display: flex;
+  }
+
+  .menu {
+    width: min(320px, 85%);
+    height: 100vh;
+    padding: 110px 35px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--fondo-secundario);
+    border-left: 1px solid var(--borde);
+    transition: right 0.35s ease;
+    z-index: 1050;
+  }
+
+  .menu.abierto {
+    right: 0;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  /* Primera línea convertida en una cruz */
+  .boton-menu.abierto span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  /* Ocultamos la línea central */
+  .boton-menu.abierto span:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Tercera línea convertida en una cruz */
+  .boton-menu.abierto span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .inicio {
+    min-height: auto;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inicio-imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .foto-provisoria {
+    width: 240px;
+    height: 300px;
+  }
+
+  .seccion {
+    width: 86%;
+    min-height: auto;
+    padding: 80px 0;
+  }
+}
+
+/* ==================================================
+   CELULARES
+================================================== */
+
+@media (max-width: 700px) {
+  .encabezado {
+    padding: 6px 7%;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .inicio {
+    padding: 80px 7%;
+    gap: 45px;
+  }
+
+  .inicio h1 {
+    letter-spacing: -1px;
+  }
+
+  .inicio-botones {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .boton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 30px 0;
+  }
+
+  /* Experiencias con fondo en celulares */
+    .experiencia-ixnova,
+    .experiencia-fatties,
+    .experiencia-gold-clean,
+    .experiencia-interplan,
+    .experiencia-burger-king {
+        padding: 28px 20px;
+        background-image:
+            linear-gradient(
+                rgba(17, 18, 20, 0.88),
+                rgba(17, 18, 20, 0.88)
+            ),
+            var(--imagen-experiencia);
+        background-position: 70% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+  .experiencia-fecha {
+    display: flex;
+    gap: 8px;
+  }
+
+  .experiencia-fecha p:first-child::after {
+    content: " —";
+  }
+
+  .lista-estudios {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tarjeta-estudio {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .escenario-carrusel {
+    height: 380px;
+  }
+
+  .grilla-habilidades {
+    grid-template-columns: 1fr;
+  }
+
+  .grupo-habilidades {
+    min-height: auto;
+  }
+
+  .certificado {
+    width: 82%;
+  }
+
+  .certificado.anterior {
+    transform: translateX(calc(-116% + var(--arrastre, 0px))) scale(0.78);
+  }
+
+  .certificado.siguiente {
+    transform: translateX(calc(16% + var(--arrastre, 0px))) scale(0.78);
+  }
+
+  .certificado-informacion h3 {
+    font-size: 16px;
+  }
+
+  .lista-proyectos {
+    gap: 65px;
+  }
+
+  .proyecto {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .proyecto-invertido .proyecto-imagen,
+  .proyecto-invertido .proyecto-informacion {
+    order: initial;
+  }
+
+  .imagen-provisoria {
+    min-height: 210px;
+  }
+
+  .proyecto-informacion h3 {
+    font-size: 21px;
+  }
+
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .volver-arriba {
+    width: 40px;
+    height: 40px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .foto-perfil {
+    width: 240px;
+    height: 300px;
+  }
+
+  .sobre-mi-fondo {
+    min-height: 440px;
+    padding: 30px 22px;
+    justify-content: flex-end;
+    background-image:
+        linear-gradient(
+            rgba(17, 18, 20, 0.48) 0%,
+            rgba(17, 18, 20, 0.88) 55%,
+            rgba(17, 18, 20, 0.98) 100%
+        ),
+        url("../img/sobre-mi/sobre-mi-fondo.png");
+    background-position: 65% center;
+  }
+
+  .sobre-mi-fondo p {
+    max-width: 100%;
+  }
+
+}
