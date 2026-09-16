@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 610" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="barra" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6d6d6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d6d6d6" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fondo general -->
+  <rect x="0" y="0" width="1280" height="610" fill="#111214"/>
+
+  <!-- barra lateral -->
+  <rect x="0" y="0" width="220" height="610" fill="#191a1d"/>
+  <rect x="0" y="0" width="220" height="610" fill="none" stroke="#2c2d31" stroke-width="1"/>
+
+  <circle cx="40" cy="38" r="9" fill="#f2f0eb"/>
+  <text x="58" y="43" fill="#f2f0eb" font-size="16" font-weight="600">StockApp</text>
+
+  <!-- items de navegacion -->
+  <g font-size="13">
+    <rect x="16" y="78" width="188" height="34" rx="6" fill="#2c2d31"/>
+    <text x="32" y="100" fill="#f2f0eb">Dashboard</text>
+
+    <text x="32" y="144" fill="#a7a7aa">Productos</text>
+    <text x="32" y="180" fill="#a7a7aa">Categorías</text>
+    <text x="32" y="216" fill="#a7a7aa">Movimientos</text>
+    <text x="32" y="252" fill="#a7a7aa">Proveedores</text>
+    <text x="32" y="288" fill="#a7a7aa">Reportes</text>
+  </g>
+
+  <line x1="16" y1="530" x2="204" y2="530" stroke="#2c2d31" stroke-width="1"/>
+  <circle cx="32" cy="556" r="11" fill="#2c2d31"/>
+  <text x="52" y="560" fill="#a7a7aa" font-size="12">admin@stock.com</text>
+
+  <!-- barra superior -->
+  <line x1="220" y1="64" x2="1280" y2="64" stroke="#2c2d31" stroke-width="1"/>
+  <text x="248" y="38" fill="#f2f0eb" font-size="18" font-weight="600">Panel de inventario</text>
+
+  <rect x="920" y="20" width="220" height="24" rx="6" fill="#191a1d" stroke="#2c2d31"/>
+  <text x="934" y="36" fill="#a7a7aa" font-size="11">Buscar producto...</text>
+  <circle cx="1200" cy="32" r="13" fill="#2c2d31"/>
+
+  <!-- tarjetas de estadisticas -->
+  <g font-size="11">
+    <rect x="248" y="92" width="230" height="80" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="266" y="118" fill="#a7a7aa">Total de productos</text>
+    <text x="266" y="148" fill="#f2f0eb" font-size="22" font-weight="700">1.248</text>
+
+    <rect x="496" y="92" width="230" height="80" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="514" y="118" fill="#a7a7aa">Stock bajo</text>
+    <text x="514" y="148" fill="#f2f0eb" font-size="22" font-weight="700">32</text>
+
+    <rect x="744" y="92" width="230" height="80" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="762" y="118" fill="#a7a7aa">Movimientos hoy</text>
+    <text x="762" y="148" fill="#f2f0eb" font-size="22" font-weight="700">57</text>
+
+    <rect x="992" y="92" width="240" height="80" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="1010" y="118" fill="#a7a7aa">Categorías</text>
+    <text x="1010" y="148" fill="#f2f0eb" font-size="22" font-weight="700">14</text>
+  </g>
+
+  <!-- mini grafico de barras -->
+  <g>
+    <rect x="248" y="192" width="460" height="140" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="266" y="216" fill="#f2f0eb" font-size="13" font-weight="600">Movimientos por semana</text>
+    <g>
+      <rect x="282" y="272" width="24" height="34" rx="3" fill="url(#barra)"/>
+      <rect x="322" y="256" width="24" height="50" rx="3" fill="url(#barra)"/>
+      <rect x="362" y="284" width="24" height="22" rx="3" fill="url(#barra)"/>
+      <rect x="402" y="242" width="24" height="64" rx="3" fill="url(#barra)"/>
+      <rect x="442" y="262" width="24" height="44" rx="3" fill="url(#barra)"/>
+      <rect x="482" y="232" width="24" height="74" rx="3" fill="url(#barra)"/>
+      <rect x="522" y="266" width="24" height="40" rx="3" fill="url(#barra)"/>
+      <rect x="562" y="278" width="24" height="28" rx="3" fill="url(#barra)"/>
+      <rect x="602" y="250" width="24" height="56" rx="3" fill="url(#barra)"/>
+    </g>
+    <line x1="266" y1="306" x2="678" y2="306" stroke="#2c2d31" stroke-width="1"/>
+  </g>
+
+  <!-- distribucion por categoria -->
+  <g>
+    <rect x="724" y="192" width="508" height="140" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="742" y="216" fill="#f2f0eb" font-size="13" font-weight="600">Distribución por categoría</text>
+    <circle cx="810" cy="270" r="36" fill="none" stroke="#2c2d31" stroke-width="12"/>
+    <circle cx="810" cy="270" r="36" fill="none" stroke="#f2f0eb" stroke-width="12" stroke-dasharray="124 226" stroke-linecap="round"/>
+    <circle cx="810" cy="270" r="36" fill="none" stroke="#a7a7aa" stroke-width="12" stroke-dasharray="62 226" stroke-dashoffset="-124" stroke-linecap="round"/>
+
+    <circle cx="890" cy="248" r="5" fill="#f2f0eb"/>
+    <text x="904" y="252" fill="#a7a7aa" font-size="11">Electrónica</text>
+    <circle cx="890" cy="272" r="5" fill="#a7a7aa"/>
+    <text x="904" y="276" fill="#a7a7aa" font-size="11">Herramientas</text>
+    <circle cx="890" cy="296" r="5" fill="#2c2d31"/>
+    <text x="904" y="300" fill="#a7a7aa" font-size="11">Hogar</text>
+  </g>
+
+  <!-- tabla de productos -->
+  <g>
+    <rect x="248" y="352" width="984" height="214" rx="8" fill="#191a1d" stroke="#2c2d31"/>
+    <text x="266" y="378" fill="#f2f0eb" font-size="13" font-weight="600">Últimos productos</text>
+
+    <g fill="#a7a7aa" font-size="11">
+      <text x="266" y="406">Producto</text>
+      <text x="516" y="406">Categoría</text>
+      <text x="696" y="406">Stock</text>
+      <text x="816" y="406">Precio</text>
+      <text x="956" y="406">Estado</text>
+    </g>
+    <line x1="266" y1="418" x2="1216" y2="418" stroke="#2c2d31" stroke-width="1"/>
+
+    <g font-size="11" fill="#f2f0eb">
+      <text x="266" y="448">Mouse óptico inalámbrico</text>
+      <text x="516" y="448" fill="#a7a7aa">Electrónica</text>
+      <text x="696" y="448" fill="#a7a7aa">124</text>
+      <text x="816" y="448" fill="#a7a7aa">$ 8.500</text>
+      <rect x="954" y="436" width="64" height="18" rx="9" fill="#2c2d31"/>
+      <text x="966" y="449" fill="#f2f0eb" font-size="10">Disponible</text>
+    </g>
+    <line x1="266" y1="466" x2="1216" y2="466" stroke="#2c2d31" stroke-width="1"/>
+
+    <g font-size="11" fill="#f2f0eb">
+      <text x="266" y="496">Destornillador set x12</text>
+      <text x="516" y="496" fill="#a7a7aa">Herramientas</text>
+      <text x="696" y="496" fill="#a7a7aa">8</text>
+      <text x="816" y="496" fill="#a7a7aa">$ 12.300</text>
+      <rect x="954" y="484" width="64" height="18" rx="9" fill="#2c2d31"/>
+      <text x="964" y="497" fill="#f2f0eb" font-size="10">Stock bajo</text>
+    </g>
+    <line x1="266" y1="514" x2="1216" y2="514" stroke="#2c2d31" stroke-width="1"/>
+
+    <g font-size="11" fill="#f2f0eb">
+      <text x="266" y="544">Lámpara de escritorio LED</text>
+      <text x="516" y="544" fill="#a7a7aa">Hogar</text>
+      <text x="696" y="544" fill="#a7a7aa">56</text>
+      <text x="816" y="544" fill="#a7a7aa">$ 15.900</text>
+      <rect x="954" y="532" width="64" height="18" rx="9" fill="#2c2d31"/>
+      <text x="966" y="545" fill="#f2f0eb" font-size="10">Disponible</text>
+    </g>
+  </g>
+</svg>
