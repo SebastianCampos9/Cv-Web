@@ -102,6 +102,7 @@ const enlacesMenu = document.querySelectorAll(".menu a");
 function alternarMenu() {
   const menuAbierto = menu.classList.toggle("abierto");
 
+  document.body.classList.toggle("menu-abierto", menuAbierto);
   botonMenu.classList.toggle("abierto", menuAbierto);
   botonMenu.setAttribute("aria-expanded", menuAbierto);
   botonMenu.setAttribute(
@@ -112,6 +113,7 @@ function alternarMenu() {
 
 function cerrarMenu() {
   menu.classList.remove("abierto");
+  document.body.classList.remove("menu-abierto");
   botonMenu.classList.remove("abierto");
   botonMenu.setAttribute("aria-expanded", "false");
   botonMenu.setAttribute("aria-label", "Abrir menú");
@@ -121,6 +123,37 @@ botonMenu.addEventListener("click", alternarMenu);
 
 enlacesMenu.forEach((enlace) => {
   enlace.addEventListener("click", cerrarMenu);
+});
+
+// Cierra el menú al tocar fuera de él, sin activar lo que haya debajo
+document.addEventListener(
+  "click",
+  (evento) => {
+    const menuAbierto = menu.classList.contains("abierto");
+    const tocoFuera =
+      !menu.contains(evento.target) && !botonMenu.contains(evento.target);
+
+    if (menuAbierto && tocoFuera) {
+      evento.preventDefault();
+      evento.stopPropagation();
+      cerrarMenu();
+    }
+  },
+  true,
+);
+
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape" && menu.classList.contains("abierto")) {
+    cerrarMenu();
+    botonMenu.focus();
+  }
+});
+
+// Si se agranda la pantalla con el menú abierto, lo cerramos
+window.matchMedia("(min-width: 851px)").addEventListener("change", (evento) => {
+  if (evento.matches) {
+    cerrarMenu();
+  }
 });
 
 /* ==================================================

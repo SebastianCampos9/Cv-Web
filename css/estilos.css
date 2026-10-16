@@ -39,7 +39,7 @@ body {
 .encabezado {
   width: 100%;
   padding: 6px 8%;
-  background-color: rgba(17, 18, 20, 0.95);
+  background-color: var(--fondo-principal);
   border-bottom: 1px solid var(--borde);
   position: sticky;
   top: 0;
@@ -1101,6 +1101,7 @@ body {
   .menu {
     width: min(320px, 85%);
     height: 100vh;
+    height: 100dvh;
     padding: 110px 35px 40px;
     display: flex;
     flex-direction: column;
@@ -1117,6 +1118,13 @@ body {
 
   .menu.abierto {
     right: 0;
+    /* Oscurece la página detrás del menú */
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.55);
+  }
+
+  /* Evita que la página scrollee con el menú abierto */
+  body.menu-abierto {
+    overflow: hidden;
   }
 
   .menu a {
