@@ -320,7 +320,7 @@ body {
             rgba(17, 18, 20, 0.92) 45%,
             rgba(17, 18, 20, 0.42) 100%
         ),
-        url("../img/sobre-mi/sobre-mi-fondo.png");
+        url("../img/sobre-mi/sobre-mi-fondo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -375,27 +375,27 @@ body {
 /* Imagen correspondiente a cada trabajo */
 .experiencia-ixnova {
     --imagen-experiencia:
-        url("../img/experiencias/ixnova-deposito.png");
+        url("../img/experiencias/ixnova-deposito.jpg");
 }
 
 .experiencia-fatties {
     --imagen-experiencia:
-        url("../img/experiencias/fatties-administracion.png");
+        url("../img/experiencias/fatties-administracion.jpg");
 }
 
 .experiencia-gold-clean {
     --imagen-experiencia:
-        url("../img/experiencias/gold-clean-higiene.png");
+        url("../img/experiencias/gold-clean-higiene.jpg");
 }
 
 .experiencia-interplan {
     --imagen-experiencia:
-        url("../img/experiencias/interplan-mensajeria.png");
+        url("../img/experiencias/interplan-mensajeria.jpg");
 }
 
 .experiencia-burger-king {
     --imagen-experiencia:
-        url("../img/experiencias/burger-king-cocina.png");
+        url("../img/experiencias/burger-king-cocina.jpg");
 }
 
 .experiencia:first-child {
@@ -1305,7 +1305,7 @@ body {
             rgba(17, 18, 20, 0.88) 55%,
             rgba(17, 18, 20, 0.98) 100%
         ),
-        url("../img/sobre-mi/sobre-mi-fondo.png");
+        url("../img/sobre-mi/sobre-mi-fondo.jpg");
     background-position: 65% center;
   }
 
